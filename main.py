@@ -65,17 +65,20 @@ def update_status():
 
 
 def main():
-    # schedule.every().hour.at(":00").do(update_status)
-    # schedule.every().hour.at(":15").do(update_status)
-    # schedule.every().hour.at(":30").do(update_status)
-    # schedule.every().hour.at(":45").do(update_status)
+    schedule.every().hour.at(":00").do(update_status)
+    schedule.every().hour.at(":15").do(update_status)
+    schedule.every().hour.at(":30").do(update_status)
+    schedule.every().hour.at(":45").do(update_status)
 
-    # while True:
+    while True:
+        try:
+            schedule.run_pending()
+            time.sleep(1)
+        except:
+            time.sleep(60)
+            pass
 
-        # schedule.run_pending()
-        # time.sleep(1)
-
-    update_status()
+    # update_status()
 
 
 if __name__ == "__main__":

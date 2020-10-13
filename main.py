@@ -55,7 +55,7 @@ def update_status():
     tweet = post_frame(frame_directory, frame_string)
 
     log("Last tweet successful!")
-    log("Tweet: <url>")
+    log(f"Tweet ID: {tweet.id}")
     log("")
     log(f"Deleting {frame_directory}...")
     delete_frame(frame, ep)
@@ -75,6 +75,8 @@ def main():
     while True:
         schedule.run_pending()
         time.sleep(1)
+
+    # update_status()
 
 
 if __name__ == "__main__":

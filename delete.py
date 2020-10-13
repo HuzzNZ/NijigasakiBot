@@ -1,6 +1,7 @@
 import os
-from log import log
+
 from constant import epdir, framedir
+from log import log
 
 
 def delete_episode(episode: int):

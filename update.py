@@ -1,7 +1,8 @@
 import os
-from log import log
+
 from constant import epdir, framedir
 from delete import delete_episode
+from log import log
 
 
 def find_earliest_episode(max_ep: int = 13):

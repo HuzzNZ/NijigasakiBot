@@ -1,0 +1,10 @@
+certifi
+chardet
+future
+idna
+oauthlib
+python-twitter==3.5
+requests
+requests-oauthlib
+schedule
+urllib3

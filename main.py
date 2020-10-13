@@ -1,8 +1,11 @@
-import schedule
 import time
-from update import *
-from meta import FINAL_FRAME
+
+import schedule
+
 from delete import delete_frame
+from meta import FINAL_FRAME
+from update import *
+from twitter_api import post_frame
 
 
 def update_status():
@@ -48,7 +51,8 @@ def update_status():
     frame_string = f"🎞️ {frame}/{last_frame}, Episode {ep}"
     log(f"Caption: {frame_string}")
 
-    # DO TWITTER STUFF HERE
+    # Post on twitter
+    tweet = post_frame(frame_directory, frame_string)
 
     log("Last tweet successful!")
     log("Tweet: <url>")

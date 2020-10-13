@@ -48,7 +48,7 @@ def update_status():
     log(f"Using {frame_directory} to post on twitter")
 
     # Frame string to use as caption on twitter
-    frame_string = f"🎞️ {frame}/{last_frame}, Episode {ep}"
+    frame_string = f"🎞️ {frame}/{last_frame}, Episode {ep} #虹ヶ咲"
     log(f"Caption: {frame_string}")
 
     # Post on twitter

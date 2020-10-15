@@ -1,9 +1,11 @@
 import twitter
 
+from typing import Union
+
 from creds import CREDS
 
 
-def post_frame(frame_dir, status):
+def post_frame(frame_dir, status) -> Union[twitter.models.Status, None]:
     """
     Posts a tweet with the frame in the directory specified.
 
@@ -18,9 +20,13 @@ def post_frame(frame_dir, status):
         access_token_secret=CREDS["access_secret"],
         timeout=600
     )
-    with open(frame_dir, "rb+") as img:
-        status = api.PostUpdate(
-            status=status,
-            media=img
-        )
+    try:
+        with open(frame_dir, "rb+") as img:
+            status = api.PostUpdate(
+                status=status,
+                media=img
+            )
+    except FileNotFoundError:
+        return None
+
     return status

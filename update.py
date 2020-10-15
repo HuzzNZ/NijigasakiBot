@@ -1,11 +1,13 @@
 import os
 
+from typing import Union
+
 from constant import epdir, framedir
 from delete import delete_episode
 from log import log
 
 
-def find_earliest_episode(max_ep: int = 13):
+def find_earliest_episode(max_ep: int = 13) -> Union[int, None]:
     """
     Finds the earliest episode folder that exists in directory.
 
@@ -23,7 +25,7 @@ def find_earliest_episode(max_ep: int = 13):
                 return None
 
 
-def find_earliest_frame(episode: int, max_frames: int = 2500):
+def find_earliest_frame(episode: int, max_frames: int = 2500) -> Union[int, None]:
     """
     Finds the earliest frame number that exists in the episode's directory.
 
@@ -42,7 +44,7 @@ def find_earliest_frame(episode: int, max_frames: int = 2500):
                 return None
 
 
-def check_episode_folder(episode: int):
+def check_episode_folder(episode: int) -> Union[int, None]:
     """
     Checks the episode's folders, and deletes the folder if it is empty.
 

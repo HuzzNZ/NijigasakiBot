@@ -2,6 +2,9 @@ import time
 
 import schedule
 
+import logging
+import traceback
+
 from delete import delete_frame
 from meta import FINAL_FRAME
 from update import *
@@ -74,7 +77,10 @@ def main():
         try:
             schedule.run_pending()
             time.sleep(1)
-        except:
+        except Exception as e:
+            logging.error(traceback.format_exc())
+            print(e)
+
             time.sleep(60)
             pass
 

@@ -1,7 +1,7 @@
 import datetime
 
 
-def log(message, status: str = "INFO"):
+def log(message, status: str = "INFO") -> None:
     """
     A function to display logs including a timestamp.
 

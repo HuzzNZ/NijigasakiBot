@@ -1,4 +1,4 @@
-def epdir(episode: int):
+def epdir(episode: int) -> str:
     """
     Returns the episode folder name given an episode number.
 
@@ -8,7 +8,7 @@ def epdir(episode: int):
     return f"ep{episode}"
 
 
-def framedir(frame: int, episode: int = None):
+def framedir(frame: int, episode: int = None) -> str:
     """
     Returns the frame directory given a frame number. If episode is not defined, returns the name of a frame. Otherwise,
     returns a string with the episode directory.

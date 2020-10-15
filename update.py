@@ -23,7 +23,7 @@ def find_earliest_episode(max_ep: int = 13):
                 return None
 
 
-def find_earliest_frame(episode: int, max_frames: int = 250):
+def find_earliest_frame(episode: int, max_frames: int = 2500):
     """
     Finds the earliest frame number that exists in the episode's directory.
 

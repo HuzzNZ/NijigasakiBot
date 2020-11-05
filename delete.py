@@ -4,7 +4,7 @@ from constant import epdir, framedir
 from log import log
 
 
-def delete_episode(episode: int):
+def delete_episode(episode: int) -> bool:
     """
     Deletes an episode's directory.
 
@@ -28,7 +28,7 @@ def delete_episode(episode: int):
         return False
 
 
-def delete_frame(frame: int, episode: int):
+def delete_frame(frame: int, episode: int) -> bool:
     """
     Deletes a frame.
 

@@ -69,9 +69,11 @@ def update_status():
 
 def main():
     schedule.every().hour.at(":00").do(update_status)
-    schedule.every().hour.at(":15").do(update_status)
+    schedule.every().hour.at(":10").do(update_status)
+    schedule.every().hour.at(":20").do(update_status)
     schedule.every().hour.at(":30").do(update_status)
-    schedule.every().hour.at(":45").do(update_status)
+    schedule.every().hour.at(":40").do(update_status)
+    schedule.every().hour.at(":50").do(update_status)
 
     while True:
         try:

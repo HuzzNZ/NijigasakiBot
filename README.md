@@ -1,6 +1,6 @@
 # nijigasaki-bot
 A twitter bot that posts every frame of the Nijigasaki Anime in order.
-Frames extracted at 1 FPS, tweeted every 15 minutes.
+Frames extracted at 1.5 FPS, tweeted every 10 minutes.
 
 * [Twitter Account](https://twitter.com/NijigasakiBot)
 
@@ -18,7 +18,7 @@ Frames extracted at 1 FPS, tweeted every 15 minutes.
 
 ## ffmpeg frame extraction command
 
-`ffmpeg -i video.mkv -r 1 -qscale:v 2 %04d.jpg`
+`ffmpeg -i video.mkv -r 1.5 -qscale:v 2 %04d.jpg`
 
 ## Episode folder naming scheme
 
